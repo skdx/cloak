@@ -2,12 +2,12 @@
 
 = Creating your first project =
 
-*1.* Make sure you have the source code, instructions for obtaining the source can be found at http://code.google.com/p/wixys/source/checkout
+*1.* Make sure you have the source code, instructions for obtaining the source can be found at http://code.google.com/p/cloak/source/checkout
 
 
 *2.* Next you'll need to create a new Eclipse project, for reference here is a picture of my project settings.  
 
-http://wixys.googlecode.com/svn/trunk/docs/images/eclipse_project_settings.png
+http://cloak.googlecode.com/svn/trunk/docs/images/eclipse_project_settings.png
 
 I would suggest following the same
 convention during the tutorial stages to avoid any confusion.
@@ -93,15 +93,14 @@ any suggestions for tutorials, questions or feature requests for the framework p
 
 
 
-*WixysActivity.java*
+*CloakActivity.java*
 {{{
-package com.wixys;
-
-import com.wixys.samples.SampleSurface;
+package com.cloak;
 
 import android.app.Activity;
+import android.os.Bundle;
 
-public class WixysActivity extends Activity {
+public class CloakActivity extends Activity {
 
     private SampleSurface mSampleSurface;
 
@@ -111,11 +110,11 @@ public class WixysActivity extends Activity {
         
         mSampleSurface = new SampleSurface(this);
         setContentView(mSampleSurface);
-    }
-    
+    }    
     
 }
 }}}
+
 *SampleSurface.java*
 {{{
 package com.cloak;
