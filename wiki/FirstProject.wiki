@@ -118,19 +118,18 @@ public class WixysActivity extends Activity {
 }}}
 *SampleSurface.java*
 {{{
-package com.wixys.samples;
+package com.cloak;
+
+import com.cloak.game.GameSurface;
+import com.cloak.game.Sprite;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
 
-import com.wixys.R;
-import com.wixys.game.GameSurface;
-import com.wixys.game.Sprite;
-
 public class SampleSurface extends GameSurface {
 
     Sprite mSpriteRobot;
-	
+        
     public SampleSurface(Context context) {
         super(context);
         mSpriteRobot = new Sprite(BitmapFactory.decodeResource(getContext().getResources(), R.drawable.android_wrench), 0, 0);
