@@ -14,9 +14,9 @@ convention during the tutorial stages to avoid any confusion.
 If you are unsure how to create a new project follow the official Android instructions at http://developer.android.com/guide/developing/eclipse-adt.html.
 
 
-*3.* Now we need to link the wixys open source framework into our Eclipse project. Open up your project properties and select "Java Build Path", in the 
+*3.* Now we need to link the cloak open source framework into our Eclipse project. Open up your project properties and select "Java Build Path", in the 
 "Source" tab you will see a button named "Link Source".  You will need to find the location where you checked out the source code in the first
-step, for folder name I use wixys.  Once you press OK and refresh your project you see the new wixys folder containing the framework code.
+step, for folder name I use cloak.  Once you press OK and refresh your project you see the new cloak folder containing the framework code.
 
 *Note:* This step was performed on a Mac OS X so it may be slightly different on other operating systems.
 
@@ -25,11 +25,11 @@ step, for folder name I use wixys.  Once you press OK and refresh your project y
 Your SampleSurface class should look like this
 
 {{{
-package com.wixys.samples
+package com.cloak
 
 import android.content.Context;
 
-import com.wixys.game.GameSurface;
+import com.cloak.game.GameSurface;
 
 public class SampleSurface extends GameSurface {
 
@@ -50,7 +50,7 @@ Sprite mSpriteRobot;
 {{{
 mSpriteRobot = new Sprite(BitmapFactory.decodeResource(getContext().getResources(), R.drawable.android_wrench), 0, 0);
 }}}
-Note: Here is the robot image http://wixys.googlecode.com/svn/trunk/docs/images/android_wrench.png
+Note: Here is the robot image http://cloak.googlecode.com/svn/trunk/docs/images/android_wrench.png
 
 *7.* Open the Activity class we created for the project, we need tell Android to display our SampleSurface class instead of the default main.xml
 
@@ -69,7 +69,7 @@ public void onCreate(Bundle savedInstanceState) {
 *8.* If we run our application at this stage we will be presented with a black screen.  This is because in our SampleSurface doesn't actually do anything
 besides create a Sprite object.  
 
-http://wixys.googlecode.com/svn/trunk/docs/images/fwp_blank.png
+http://cloak.googlecode.com/svn/trunk/docs/images/tut1_blank.png
 
 We need to implement a draw method if we want to view our Sprite on the screen.
 
@@ -86,7 +86,7 @@ I will go into more details about these in the Animated Sprite tutorial. mCanvas
 so you don't need to worry too much about it except for the fact we use mCanvas to draw onto the screen.  We need to pass our Canvas to the Sprite so we can draw to the screen.
 After adding these 4 lines of code to SampleSurface run the sample application and you will see an Android Robot drawn holding a wrench.
 
-http://wixys.googlecode.com/svn/trunk/docs/images/fwp_sprite.png
+http://cloak.googlecode.com/svn/trunk/docs/images/tut1_sprite.png
 
 This wraps up the first tutorial.  Over the coming weeks I will explain the various building blocks required to develop a basic game.  If you have
 any suggestions for tutorials, questions or feature requests for the framework please let me know.
