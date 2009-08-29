@@ -20,6 +20,7 @@ package com.cloak.game;
  * Based on the Sprite class and provides animation
  */
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 
 public class AnimatedSprite extends Sprite {
 
@@ -75,7 +76,18 @@ public class AnimatedSprite extends Sprite {
 				}
 				
 			}
-			mSprite = mAnimatedSprite[mCurrentFrame];
+			//jmt: no need if we have a draw method in AnimatedSprite
+			//mSprite = mAnimatedSprite[mCurrentFrame];
+		}
+	}
+	
+	/** AnimatedSprite draw routine **/
+	public void draw(Canvas canvas) {
+		if (mVisible) {
+			canvas.save();
+			canvas.rotate(mRotateDegrees, mX + mWidth/2, mY + mHeight/2);
+			canvas.drawBitmap(mAnimatedSprite[mCurrentFrame], mX, mY, mPaint);
+			canvas.restore();
 		}
 	}
 	
