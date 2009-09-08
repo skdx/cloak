@@ -133,4 +133,16 @@ public class AnimatedSprite extends Sprite {
 		mAnimationSpeed = speed;
 	}
 	
+	/** Set the current frame in the animation sequence **/
+	public void setFrame(int frame) {
+		if (frame < mAnimationFrames) {
+			mCurrentFrame = frame;
+		}
+	}
+	
+	/** Return current anmiation sequence frame **/
+	public int getFrame() {
+		return mCurrentFrame;
+	}
+	
 }
